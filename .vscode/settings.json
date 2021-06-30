@@ -8,6 +8,8 @@
         "stat.h": "c",
         "unistd.h": "c",
         "time.h": "c",
-        "dirent.h": "c"
+        "dirent.h": "c",
+        "pwd.h": "c",
+        "stdbool.h": "c"
     }
 }
