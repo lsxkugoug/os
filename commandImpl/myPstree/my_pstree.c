@@ -13,12 +13,14 @@ int main(int argc, char* argv[]){
 
 void recur(char* filename){
     DIR *dir = opendir(filename);
-    printf("%s",filename);
-    if(dir == NULL) fprintf(stderr,"can not open %s",filename);
+    if(dir == NULL){
+        fprintf(stderr,"can not open %s\n",filename);
+        return;
+    } 
     struct  dirent* dptr = NULL;
     while(NULL!= (dptr = readdir(dir))){
         if(isnumber(dptr->d_name)){
-            printf("%s\n","|");
+            // printf("%s\n","|");
             printf("%s","-");
             printf("%s\n",dptr->d_name);
             char name[100] = "./"; 
